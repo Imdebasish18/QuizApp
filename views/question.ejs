@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .question-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .option {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+      .option:hover {
+        background-color: lightblue;
+      }
+      .option.selected {
+        background-color: blue;
+        color: white;
+      }
+      .option.correct {
+        background-color: green;
+        color: white;
+      }
+      .option.wrong {
+        background-color: red;
+        color: white;
+      }
+      .submit-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: inline;
+      }
+      .next-btn,
+      .exit-btn {
+        display: none;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .exit-btn {
+        margin-left: 408px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="question-container">
+      <h2><%= randomQuestion.qs %></h2>
+      <div class="option" data-option="option1">
+        <%= randomQuestion.option1 %>
+      </div>
+      <div class="option" data-option="option2">
+        <%= randomQuestion.option2 %>
+      </div>
+      <div class="option" data-option="option3">
+        <%= randomQuestion.option3 %>
+      </div>
+      <div class="option" data-option="option4">
+        <%= randomQuestion.option4 %>
+      </div>
+      <button class="submit-btn" type="submit">Submit Answer</button>
+      <button class="next-btn">Next Question</button>
+      <button class="exit-btn">Exit</button>
+    </div>
+
+    <script>
+      const collecions = ["DSA", "ComputerOrganization", "ProgrammingUsingC"];
+      let currentQuestionIndex = 0;
+      let score = 0;
+      let selectedOption;
+      const options = document.querySelectorAll(".option");
+      const submitBtn = document.querySelector(".submit-btn");
+      const nextBtn = document.querySelector(".next-btn");
+      const exitBtn = document.querySelector(".exit-btn");
+
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          if (selectedOption) {
+            selectedOption.classList.remove("selected");
+          }
+          option.classList.add("selected");
+          selectedOption = option;
+        });
+      });
+
+      submitBtn.addEventListener("click", () => {
+        if (!selectedOption) {
+          alert("Please select an option.");
+          return;
+        } else {
+          submitBtn.remove();
+        }
+
+        nextBtn.addEventListener("click", () => {
+          window.location.reload(); // Reloads the page to get a new question
+          nextBtn.remove();
+        });
+        exitBtn.addEventListener("click", () => {
+          window.history.back();
+          nextBtn.remove();
+        });
+        answer = selectedOption.textContent;
+
+        fetch("/auth/check-answer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            collectionName: "<%= collectionName %>",
+            answer: "<%= randomQuestion.answer %>",
+            userAnswer: answer,
+            id: "<%= randomQuestion._id %>",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.isMatch == true) {
+              selectedOption.classList.add("correct");
+            } else {
+              selectedOption.classList.add("wrong");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+        submitBtn.disabled = true;
+        options.forEach((option) => {
+          option.style.pointerEvents = "none";
+        });
+        nextBtn.style.display = "inline";
+        exitBtn.style.display = "inline";
+      });
+    </script>
+  </body>
+</html>

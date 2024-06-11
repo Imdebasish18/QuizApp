@@ -1,0 +1,391 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <!--Header of the webpage-->
+    <div class="header row">
+      <div class="logo col-2">
+        <span class="logo-1stpart">FT</span>
+        <span class="logo-2stpart">Quiz</span>
+      </div>
+      <div class="nav-bar col-7">
+        <a href="/">Home</a>
+        <a href="#trending-quiz">Trending</a>
+        <a href="#">Categories</a>
+        <a href="#">Information</a>
+      </div>
+      <div class="login-join col-3">
+        <form action="/login" method="GET">
+          <button class="login-btn">Login</button>
+        </form>
+
+        <form action="/register" method="GET">
+          <button class="join-btn">Join for free</button>
+        </form>
+      </div>
+    </div>
+
+    <!--Main content of the webpage-->
+    <div class="main-content">
+      <div class="heading">
+        <div class="heading-background"></div>
+        <div class="heading-content">
+          <h1>Welcome to FT Quiz</h1>
+          <p>
+            Exercise your brain
+            <br />
+            with these interesting quizzes,
+            <br />
+            win points and impress your friends!
+          </p>
+        </div>
+      </div>
+
+      <!--home of The webpage-->
+      <div class="container mb-2" id="home">
+        <p><span>Home</span>/Quiz</p>
+        <h2>Latest Quizzes</h2>
+
+        <!--cards belong to latest Quiz-->
+        <div class="cards row">
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Data Structure & Algorithm</h3>
+              <img src="/images/dsa-image.png" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Computer Organization</h3>
+              <img src="/images/co.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Programming using C</h3>
+              <img src="/images/c.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Baics of Web development</h3>
+              <img src="/images/Web development.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Operating System</h3>
+              <img src="/images/operating-sytem.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Computer Networking</h3>
+              <img src="/images/computer network.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Cloud computing</h3>
+              <img src="/images/cloud computing.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-3 mb-4">
+            <div class="card">
+              <h3>Machine learning</h3>
+              <img src="/images/machine learning.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Cards belong to trending quizzes-->
+
+      <div class="container mb-2" id="trending-quiz">
+        <p><span>Trending</span>/Quiz</p>
+        <h2>Trending Quizzes</h2>
+        <div class="cards row">
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Data Structure & Algorithm</h3>
+              <img src="/images/dsa-image.png" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Programming using C</h3>
+              <img src="/images/c.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Bollywood in 2023</h3>
+              <img src="/images/bollywood.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--cards belong to entertainment-->
+
+      <div class="container mb-2" id="Entertainment-quiz">
+        <p><span>Entertainment</span>/Quiz</p>
+        <h2>Entertainment Quizzes</h2>
+        <div class="cards row">
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Bollywood in 2023</h3>
+              <img src="/images/bollywood.webp" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Best of hollywood in 2023</h3>
+              <img src="/images/International movies.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>South-indian movies in 2023</h3>
+              <img src="/images/south indian.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Cards belong to world travel quizzes-->
+
+      <div class="container mb-2" id="world-travel-quiz">
+        <p><span>Travel</span>/Quiz</p>
+        <h2>World Travel Quizzes</h2>
+        <div class="cards row">
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Our beautiful India</h3>
+              <img src="/images/India.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Pleasant Europe</h3>
+              <img src="/images/europe.avif" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="card">
+              <h3>Modern world in USA</h3>
+              <img src="/images/usa.jpg" alt="image" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur excepdljfoei ojdf
+                </p>
+                <button type="button" class="btn btn-light">Play</button>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="powered-by">
+        <span class="made-by">&copy; Made by </span>
+        <span class="name">Debasish</span>
+      </div>
+      <button id="scrollToTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>

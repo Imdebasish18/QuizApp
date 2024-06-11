@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fac7fa, #365096);
+}
+
+/*Style for header*/
+.header {
+  z-index: 2;
+  height: 4rem;
+  background-color: #020b1a;
+  color: white;
+  /* display: block; */
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+}
+.logo-1stpart {
+  border-radius: 50%;
+  background-color: #3679e3;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.6rem;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 0.7rem;
+  font-size: 1.1rem;
+}
+
+.login-join button {
+  border-style: none;
+  margin: 0 0.5rem;
+}
+.login-btn {
+  color: white;
+  background-color: #020b1a;
+}
+.join-btn {
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 8px 8px;
+}
+
+.heading-background {
+  background-image: url("bg-header.jpg");
+  height: 20rem;
+  background-size: cover;
+}
+.heading-content {
+  top: 9.6rem;
+  text-align: center;
+  background-color: #eebde0;
+  padding: 11px 22px;
+  margin: 0 27rem;
+  position: absolute;
+  /* bottom: 2rem; */
+}
+.cards .btn {
+  border-color: black;
+  padding: 0.4em 1.3em;
+  margin-right: 5.5em;
+}
+.cards .btn:hover {
+  background-color: #001e28;
+  border-color: #001e28;
+  color: white;
+}
+.card-body .share-btn {
+  border: 1px solid black;
+  padding: 0.6em 0.9em;
+  border-radius: 50%;
+  align-self: center;
+}
+.card-body .share-btn:hover {
+  color: white;
+  background-color: #1eb2e4;
+  border-color: #1eb2e4;
+}
+.cards .card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.8em;
+  height: 370px;
+  padding: 4px;
+}
+.cards .card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.cards .card h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.cards .card img {
+  background-size: cover;
+  margin: 3px;
+  border-radius: 3px;
+  height: 40%;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 60px;
+}
+.powered-by {
+  margin-left: 72px;
+}
+#scrollToTopBtn {
+  margin-right: 38px;
+  border: 1px solid #001e28;
+  border-radius: 50%;
+  background-color: #001e28;
+  color: white;
+  padding: 0.2em 0.6em;
+}
+#scrollToTopBtn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.made-by {
+  color: rgb(134, 129, 129);
+  font-size: 0.8rem;
+  margin-right: 6px;
+}
+.name {
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-size: 1.1rem;
+  color: rgba(70, 69, 69, 0.896);
+  font-family: "Times New Roman", Times, serif;
+}
+#home,
+#trending-quiz,
+#Entertainment-quiz,
+#world-travel-quiz {
+  padding-top: 4rem;
+}
+.container p span {
+  color: #055fee;
+  font-weight: 600;
+}
+h2 {
+  margin-bottom: 2rem;
+}
+.card {
+  margin: 0.1em;
+}
+.card-body p {
+  margin-bottom: 2.5rem;
+}

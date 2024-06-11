@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #e0e0e0;
+}
+.option_transition {
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: blue;
+  color: white;
+}
+
+.container {
+  margin-top: 4%;
+}
+.container button {
+  padding: 1% 1%;
+}
+form {
+  display: inline;
+}
+.container .btn-dark {
+  margin-left: 65%;
+  padding: 1% 2%;
+}

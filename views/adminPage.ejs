@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin page</title>
+  </head>
+  <body>
+    <% let id1 = "C_language" %> <% let id2 = "DSA" %> <% let id3 =
+    "Computer_organization" %>
+    <form action="add/<%= id1 %>" method="get">
+      <button type="submit">C language</button>
+    </form>
+    <form action="add/<%= id2 %>" method="get">
+      <button type="submit">DSA</button>
+    </form>
+    <form action="add/<%= id3 %>" method="get">
+      <button type="submit">Computer Organization</button>
+    </form>
+  </body>
+</html>

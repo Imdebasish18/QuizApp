@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/LoginForm.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="login-container">
+        <div class="circle circle-one"></div>
+        <div class="form-container">
+          <img
+            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            alt="illustration"
+            class="illustration"
+          />
+          <h1 class="opacity">LOGIN</h1>
+          <form action="/auth/login" method="POST">
+            <input
+              type="email"
+              placeholder="EMAIL ID"
+              name="email"
+              id="email-section"
+            />
+            <input
+              type="password"
+              placeholder="PASSWORD"
+              name="password"
+              id="password-section"
+            />
+            <div class="error-placeholder">
+              <% if (message2) { %>
+              <div class="error-message"><%= message2 %></div>
+              <% }else{%>
+              <div class="error-message"><%= message1 %></div>
+              <%} %>
+            </div>
+            <button class="opacity">SUBMIT</button>
+          </form>
+          <div class="register-forget opacity">
+            <a href="/register?">REGISTER</a>
+            <!-------------------------->
+            <a href="#">FORGOT PASSWORD</a>
+          </div>
+        </div>
+        <div class="circle circle-two"></div>
+      </div>
+      <div class="theme-btn-container"></div>
+    </section>
+    <script src="/js/LoginForm.js"></script>
+  </body>
+</html>

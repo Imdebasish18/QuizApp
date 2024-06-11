@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>questions</title>
+  </head>
+  <body>
+    <% let i=1 %> <% for(let question of questionList){%>
+    <h1><%= i %>. <%= question.qs %></h1>
+    <ul>
+      <li><%= question.option1 %></li>
+      <li><%= question.option2 %></li>
+      <li><%= question.option3 %></li>
+      <li><%= question.option4 %></li>
+    </ul>
+    <% i++ %> <% } %>
+  </body>
+</html>

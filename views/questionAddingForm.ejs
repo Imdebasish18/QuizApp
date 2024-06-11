@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question form</title>
+  </head>
+  <body>
+    <form action="/admin/<%= collection %>" method="post">
+      <!-- <input type="text" name="question" placeholder="write your question?"/> -->
+      <label for="question">write your question?</label>
+      <textarea
+        name="qs"
+        id="question"
+        placeholder="write your question"
+      ></textarea>
+      <input type="text" name="option1" placeholder="first option" />
+      <input type="text" name="option2" placeholder="second option" />
+      <input type="text" name="option3" placeholder="third option" />
+      <input type="text" name="option4" placeholder="fourth option" />
+      <input type="text" name="answer" placeholder="answer" />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
