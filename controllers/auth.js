@@ -21,12 +21,16 @@ app.use(express.json());
 
 //new
 main()
-  .then(() => console.log("server is connected.."))
-  .catch((err) => console.log(err));
+  .then(() => console.log("Database connected"))
+  .catch((err) => console.log("Database connection error:", err));
 
 async function main() {
   // await mongoose.connect("mongodb://localhost:27017/userData");
-  await mongoose.connect(process.env.MONGO_URL);
+  // await mongoose.connect(process.env.MONGO_URL);
+  mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 }
 
 exports.register = async (req, res) => {
@@ -51,14 +55,14 @@ exports.register = async (req, res) => {
 
     // Insert the new user data into the database
     await User.insertMany([data]);
-    res.render("RegisterForm",{
-        message: "",
-        name: req.body.name,
-        email: req.body.email,
-      });
+    res.render("RegisterForm", {
+      message: "",
+      name: req.body.name,
+      email: req.body.email,
+    });
   } catch (error) {
     console.error(error);
-    res.status(500).send(error);
+    res.status(500).send("An error occurred while registering the user");
   }
 };
 
@@ -75,7 +79,6 @@ exports.login = async (req, res) => {
     } else if (!existingUser) {
       return res.render("LoginForm", {
         message1: "Wrong details or Register first!",
-        message2:"",
         email: req.body.email,
         message2: "",
       });
@@ -88,7 +91,7 @@ exports.login = async (req, res) => {
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send(req.body.email);
+    res.status(500).send("An error occurred while registering the user");
   }
 };
 
