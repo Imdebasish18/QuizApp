@@ -54,7 +54,7 @@ exports.register = async (req, res) => {
     res.render("RegisterForm");
   } catch (error) {
     console.error(error);
-    res.status(500).send("An error occurred while registering the user");
+    res.status(500).send(error);
   }
 };
 
