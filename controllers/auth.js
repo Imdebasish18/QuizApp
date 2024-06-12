@@ -51,7 +51,11 @@ exports.register = async (req, res) => {
 
     // Insert the new user data into the database
     await User.insertMany([data]);
-    res.render("RegisterForm");
+    res.render("RegisterForm",{
+        message: null,
+        name: req.body.name,
+        email: req.body.email,
+      });
   } catch (error) {
     console.error(error);
     res.status(500).send(error);
