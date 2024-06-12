@@ -14,17 +14,14 @@ const {
 
 dotenv.config({ path: "./.env" });
 
-// main()
-//   .then(() => console.log("database is connected.."))
-//   .catch((err) => console.log(err));
+main()
+  .then(() => console.log("database is connected.."))
+  .catch((err) => console.log(err));
 
-// async function main() {
-//   // await mongoose.connect("mongodb://localhost:27017/userData");
-//   await mongoose.connect(
-//     "mongodb+srv://Imdeba18:Imdeba18@@cluster0.jvbqrc8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-//   );
-// }
-// app.use("/public", express.static(path.join(__dirname, "public")));
+async function main() {
+  await mongoose.connect(process.env.MONGO_URL);
+}
+app.use("/public", express.static(path.join(__dirname, "public")));
 const publicDirectory = path.join(__dirname, "/public");
 const port = process.env.PORT;
 
@@ -42,7 +39,7 @@ app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"));
 
 app.listen(port, () => {
-  console.log("server started on port 5000....");
+  console.log(`server started on port ${port}....`);
 });
 
 //For rendering the collection name:
@@ -68,7 +65,7 @@ app.post("/questions", async (req, res) => {
 
 app.get("/admin", async (req, res) => {
   try {
-    const client = new MongoClient("mongodb://localhost:27017");
+    const client = new MongoClient(process.env.MONGO_URL);
     await client.connect();
     const db = client.db("userData");
     const collections = await db.listCollections().toArray();
