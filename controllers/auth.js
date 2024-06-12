@@ -63,6 +63,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
   //---------------------------------
   try {
+    res.send(req.body.email);
     // Check if the email already exists in the database
     let existingUser = await User.findOne({ email: req.body.email });
 
@@ -83,7 +84,7 @@ exports.login = async (req, res) => {
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send("error");
+    // res.status(500).send("error");
   }
 };
 
