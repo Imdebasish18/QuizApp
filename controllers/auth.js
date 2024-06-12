@@ -52,7 +52,7 @@ exports.register = async (req, res) => {
     // Insert the new user data into the database
     await User.insertMany([data]);
     res.render("RegisterForm",{
-        message: null,
+        message: "",
         name: req.body.name,
         email: req.body.email,
       });
@@ -75,6 +75,7 @@ exports.login = async (req, res) => {
     } else if (!existingUser) {
       return res.render("LoginForm", {
         message1: "Wrong details or Register first!",
+        message2:"",
         email: req.body.email,
         message2: "",
       });
